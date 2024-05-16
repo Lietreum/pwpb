@@ -1,0 +1,69 @@
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style untuk judul form */
+form center b {
+  font-size: 24px;
+  color: #333;
+}
+
+/* Style untuk gambar profil */
+form img#output {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+/* Style untuk input dan label */
+form label {
+  display: block;
+  margin-top: 10px;
+  color: #555;
+}
+
+form input[type="text"],
+form input[type="file"],
+form select,
+form input[type="submit"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style untuk radio button */
+form input[type="radio"] {
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+/* Style untuk tombol submit */
+form input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Animasi untuk input file */
+form input[type="file"] {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animasi untuk input file saat dipilih */
+form input[type="file"]:active::before {
+  background: #003d80;
+}
