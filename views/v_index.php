@@ -187,7 +187,7 @@
                 <td><?= $siswa['nis'] ?></td>
                 <td><?= $siswa['nama_lengkap'] ?></td>
                 <td><?= $siswa['jenis_kelamin'] ?></td>
-                <td><?= $siswa['kelas'] ?></td>
+                <td><?= $siswa['nama_kelas'] ?></td>
                 <td><?= $siswa['jurusan'] ?></td>
                 <td><?= $siswa['alamat'] ?></td>
                 <td><?= $siswa['golongan_darah'] ?></td>

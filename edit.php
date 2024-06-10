@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $nis            =$_POST['nis'];
   $nama_lengkap   =$_POST['nama_lengkap'];
   $jenis_kelamin  =$_POST['jenis_kelamin'];
-  $kelas          =$_POST['kelas'];
+  $kelas          =$_POST['id_kelas'];
   $jurusan        =$_POST['jurusan'];
   $alamat         =$_POST['alamat'];
   $golongan_darah =$_POST['golongan_darah'];
@@ -33,7 +33,7 @@ header ('location:index.php');
   $sql = "UPDATE siswa SET nis = '$nis',
   nama_lengkap   = '$nama_lengkap',
   jenis_kelamin  = '$jenis_kelamin',
-  kelas          = '$kelas',
+  id_kelas          = '$kelas',
   jurusan        = '$jurusan' ,
   alamat         = '$alamat',
   golongan_darah = '$golongan_darah',
@@ -45,5 +45,9 @@ header ('location:index.php');
 
   header('location: index.php') ;
 }
+
+// ambil data kelas
+$sql = "SELECT * FROM kelas";
+$dataKelas = $mysqli->query($sql) or die ($mysqli->error);
 
 include 'views/v_tambah.php';

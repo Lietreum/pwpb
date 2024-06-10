@@ -1,13 +1,15 @@
 <?php
-  include 'lib/library.php';  
+include 'lib/library.php';
 
-  checkLogin();
-  
-$sql ='SELECT * FROM siswa';
+checkLogin();
+
+// join
+$sql = 'SELECT siswa.*, kelas.nama_kelas FROM siswa INNER JOIN kelas ON (siswa.id_kelas = kelas.id_kelas)';
 $search = isset($_GET['search']) ? $_GET['search'] : '';
+
 if (!empty($search)) {
     $search = $mysqli->real_escape_string($search);
-    $sql .= " WHERE nis LIKE '%$search%' OR nama_lengkap LIKE '%$search%'";
+    $sql .= " WHERE siswa.nis LIKE '%$search%' OR siswa.nama_lengkap LIKE '%$search%'";
 }
 
 $order_field = isset($_GET['sort']) ? $_GET['sort'] : '';
@@ -24,6 +26,5 @@ if (!$listSiswa) {
     echo "Error: " . $mysqli->error;
     exit();
 }
-  
+
 include 'views/v_index.php';
-?>
